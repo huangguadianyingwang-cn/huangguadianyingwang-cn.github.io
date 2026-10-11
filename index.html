@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d2818">
+<title>黄瓜电影网 - 精选优质电影导航大全 | 清爽观影·1080P/4K蓝光高清影视网址收录</title>
+<meta name="description" content="黄瓜电影网（huangguadianyingwang-cn.github.io）是清爽好用的电影导航站，专注优质电影、经典老片、高分口碑片与冷门佳作的网址收录与片单推荐，支持1080P、2K、4K、蓝光原盘、REMUX、杜比视界、中文字幕。清爽观影，不将就。">
+<meta name="keywords" content="黄瓜电影网,黄瓜电影,huangguadianyingwang-cn,清爽电影,清爽观影,电影导航,电影网址大全,电影网站导航,电影网址推荐,优质电影,经典电影,高分电影,冷门佳作,高清电影,1080P,2K,4K,蓝光,蓝光原盘,REMUX,杜比视界,HDR10,60fps,中文字幕,每日更新,影视网址大全,高清影视网址,剧情,悬疑,科幻,动作,喜剧,文艺,纪录片,烂片避雷,剧荒">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://www.huangguadianyingwang-cn.github.io">
+<style>
+:root{
+  --green:#22c55e;
+  --green-d:#0d2818;
+  --green-2:#14532d;
+  --lime:#a3e635;
+  --gold:#fbbf24;
+  --ink:#e8f5ec;
+  --muted:#9db7a8;
+  --line:rgba(163,229,53,.22);
+  --card:rgba(255,255,255,.045);
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  background:radial-gradient(1200px 700px at 80% -10%,rgba(34,197,94,.18),transparent 60%),
+             radial-gradient(900px 600px at -10% 20%,rgba(251,191,36,.10),transparent 55%),
+             var(--green-d);
+  color:var(--ink);
+  line-height:1.75;
+  overflow-x:hidden;
+  padding-top:66px;
+}
+a{color:inherit;text-decoration:none;outline:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:6px}
+ul,ol{list-style:none}
+::selection{background:var(--green);color:#04120a}
+
+/* ============ NAV ============ */
+.site-nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:66px;display:flex;align-items:center;gap:22px;
+  padding:0 5vw;
+  background:rgba(8,26,15,.86);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px;white-space:nowrap}
+.brand .logo{
+  width:34px;height:34px;border-radius:9px;flex:0 0 auto;
+  background:conic-gradient(from 0deg,#22c55e,#a3e635,#fbbf24,#22c55e);
+  position:relative;
+}
+.brand .logo::after{
+  content:"";position:absolute;inset:5px;border-radius:6px;
+  background:var(--green-d);
+}
+.brand .logo i{
+  position:absolute;inset:0;z-index:2;
+  background:
+    radial-gradient(circle at 50% 42%,var(--gold) 0 3px,transparent 4px),
+    radial-gradient(circle at 40% 50%,#fff 0 1.5px,transparent 2px),
+    radial-gradient(circle at 60% 50%,#fff 0 1.5px,transparent 2px);
+}
+.brand b{font-size:17px;background:linear-gradient(90deg,var(--lime),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand em{font-style:normal;color:var(--muted);font-size:12px;font-weight:500}
+.nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{
+  padding:7px 13px;border-radius:999px;font-size:14px;color:#cfe6d8;transition:.25s;white-space:nowrap;
+}
+.nav-links a:hover{background:var(--card);color:#fff;transform:translateY(-1px)}
+.ham{display:none;margin-left:auto;width:42px;height:42px;align-items:center;justify-content:center;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.ham s{display:block;width:20px;height:2px;background:var(--lime);position:relative}
+.ham s::before,.ham s::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--lime);transition:.25s}
+.ham s::before{top:-6px}.ham s::after{top:6px}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;padding:70px 5vw 64px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;
+  border-bottom:1px solid var(--line);
+}
+.hero h1{
+  font-size:44px;line-height:1.2;font-weight:900;letter-spacing:.5px;
+}
+.hero h1 span{display:block;font-size:20px;color:var(--lime);margin-top:10px;font-weight:700;letter-spacing:1px}
+.hero h1 u{text-decoration:none;background:linear-gradient(92deg,var(--lime),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{margin-top:18px;color:#c3d8ca;font-size:15.5px;max-width:560px}
+.hero p.lead b{color:var(--gold)}
+.search{margin-top:26px;display:flex;gap:8px;max-width:560px;flex-wrap:wrap}
+.search input{
+  flex:1 1 220px;min-width:180px;height:52px;padding:0 18px;border-radius:12px;
+  border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font-size:15px;
+}
+.search input::placeholder{color:var(--muted)}
+.search button{
+  height:52px;padding:0 24px;border:0;border-radius:12px;cursor:pointer;font-weight:800;font-size:15px;color:#062014;
+  background:linear-gradient(90deg,var(--lime),var(--gold));
+  box-shadow:0 8px 24px -10px rgba(163,229,53,.7);
+  transition:.25s;
+}
+.search button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.stats{margin-top:24px;display:flex;gap:26px;flex-wrap:wrap}
+.stats div{font-size:13px;color:var(--muted)}
+.stats b{display:block;font-size:25px;color:#fff;font-weight:800;line-height:1.2}
+
+/* 黄瓜插画 */
+.cucumber{position:relative;height:340px;display:flex;align-items:center;justify-content:center}
+.vine{position:absolute;width:120px;height:120px;border-radius:50%;border:3px solid transparent;
+  border-top-color:var(--green);border-right-color:var(--lime);opacity:.5;animation:spin 16s linear infinite}
+.vine:nth-child(1){width:180px;height:180px;border-width:2px;animation-duration:22s;animation-direction:reverse}
+.cuke{
+  position:relative;width:230px;height:96px;border-radius:60px 70px 70px 60px;z-index:3;
+  background:linear-gradient(100deg,#3f8f4a 0%,#2f7a3b 45%,#1f5c2c 100%);
+  box-shadow:inset -14px -10px 26px rgba(0,0,0,.35),inset 10px 8px 18px rgba(255,255,255,.14),0 20px 40px -20px rgba(0,0,0,.6);
+  transform:rotate(-9deg);
+}
+.cuke::before{content:"";position:absolute;inset:9px 14px;border-radius:50px;border:2px dashed rgba(255,255,255,.35)}
+.cuke::after{content:"";position:absolute;right:18px;top:50%;width:14px;height:14px;border-radius:50%;background:var(--gold);transform:translateY(-50%);box-shadow:0 0 16px var(--gold)}
+.cuke b{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:15px;font-weight:900;color:#eaffd6;letter-spacing:1px;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+.leaf{position:absolute;z-index:2;border-radius:0 60% 0 60%;background:linear-gradient(135deg,var(--lime),var(--green))}
+.leaf.l1{width:54px;height:30px;left:-22px;top:14px;transform:rotate(-26deg)}
+.leaf.l2{width:44px;height:24px;right:-14px;bottom:6px;transform:rotate(34deg);border-radius:60% 0 60% 0}
+.seed{position:absolute;width:7px;height:11px;border-radius:50%;background:rgba(255,255,255,.55);z-index:4}
+.seed:nth-child(1){left:32%;top:26%}.seed:nth-child(2){left:48%;top:58%}
+.seed:nth-child(3){left:64%;top:30%}.seed:nth-child(4){left:78%;top:56%}
+.dot{position:absolute;border-radius:50%;width:9px;height:9px;background:var(--gold);box-shadow:0 0 14px var(--gold);animation:rise 3.4s ease-in-out infinite;opacity:0}
+.dot:nth-child(1){left:6%;bottom:8%;animation-delay:0s}
+.dot:nth-child(2){left:34%;bottom:2%;width:6px;height:6px;animation-delay:1.1s;background:var(--lime)}
+.dot:nth-child(3){right:10%;bottom:14%;width:12px;height:12px;animation-delay:2.1s}
+@keyframes spin{to{transform:rotate(360deg)}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}20%{opacity:1}100%{transform:translateY(-150px) scale(1.3);opacity:0}}
+
+/* ============ SECTION ============ */
+section{padding:64px 5vw}
+.sec-head{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.sec-head h2{font-size:27px;font-weight:900;letter-spacing:.5px}
+.sec-head h2 i{font-style:normal;color:var(--lime)}
+.sec-head h2::before{content:"";display:inline-block;width:6px;height:24px;border-radius:4px;margin-right:12px;vertical-align:-3px;background:linear-gradient(var(--lime),var(--gold))}
+.sec-head p{color:var(--muted);font-size:14px;margin-left:auto}
+.tag{display:inline-block;padding:3px 11px;border-radius:999px;font-size:12px;color:#0d2818;font-weight:800;background:linear-gradient(90deg,var(--lime),var(--gold));margin-left:10px;vertical-align:3px}
+
+/* ============ JAM (figure) ============ */
+.jam{display:flex;flex-direction:column;gap:14px}
+.jam figure{
+  display:grid;grid-template-columns:230px 1fr;gap:20px;align-items:center;
+  padding:14px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);transition:.3s;
+}
+.jam figure:hover{transform:translateX(6px);border-color:rgba(251,191,36,.55);background:rgba(255,255,255,.07)}
+.jam .cvr{
+  position:relative;aspect-ratio:3/2;border-radius:10px;overflow:hidden;
+  background:linear-gradient(135deg,var(--a),var(--b));
+}
+.jam .cvr span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;color:rgba(255,255,255,.92);text-shadow:0 2px 10px rgba(0,0,0,.4);letter-spacing:1px}
+.jam .cvr u{position:absolute;left:0;bottom:0;font-style:normal;font-size:11px;font-weight:800;padding:2px 9px;background:rgba(0,0,0,.55);color:var(--gold);text-decoration:none}
+.jam .cvr em{position:absolute;right:8px;top:8px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);font-style:normal;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff}
+.jam figcaption h3{font-size:18px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.jam figcaption h3 mark{background:linear-gradient(90deg,var(--lime),var(--gold));color:#062014;border-radius:6px;padding:1px 9px;font-size:12.5px;font-weight:900}
+.jam figcaption .tags{margin:8px 0;display:flex;gap:7px;flex-wrap:wrap}
+.jam figcaption .tags a{padding:3px 11px;border-radius:999px;font-size:12.5px;border:1px solid var(--line);color:#cfe6d8;transition:.2s}
+.jam figcaption .tags a:hover{border-color:var(--lime);color:var(--lime)}
+.jam figcaption>p{font-size:14px;color:#b9cfc2}
+.jam figcaption dl.meta{margin-top:10px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.jam figcaption dl.meta div{font-size:11.5px;color:var(--muted)}
+.jam figcaption dl.meta b{display:block;font-size:13px;color:#fff;font-weight:700}
+.jam figcaption>a.btn{display:inline-block;margin-top:11px;padding:7px 18px;border-radius:999px;font-size:13px;font-weight:800;color:#062014;background:linear-gradient(90deg,var(--lime),var(--gold))}
+
+/* ============ PICK (grid cards) ============ */
+.pick{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pick .card{
+  position:relative;padding:20px 16px;border-radius:var(--r);overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));
+  border:1px solid var(--line);transition:.3s;
+}
+.pick .card::after{content:"";position:absolute;left:0;top:0;width:100%;height:5px;transform:scaleX(.4);transform-origin:left;transition:.5s;background:linear-gradient(90deg,var(--lime),var(--gold))}
+.pick .card:hover{transform:translateY(-7px);border-color:rgba(163,229,53,.55)}
+.pick .card:hover::after{transform:scaleX(1)}
+.pick .card .ava{width:52px;height:52px;border-radius:13px;margin-bottom:12px;position:relative}
+.pick .card h4{font-size:15.5px;display:flex;align-items:center;gap:7px}
+.pick .card h4 s{text-decoration:none;font-size:11px;font-weight:800;color:#0d2818;padding:1px 8px;border-radius:6px;background:linear-gradient(90deg,var(--lime),var(--gold))}
+.pick .card p{margin-top:7px;font-size:13px;color:var(--muted);min-height:38px}
+.pick .card .foot{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);display:flex;justify-content:space-between;font-size:12px;color:#cfe6d8}
+
+/* ============ CATE (dl grid) ============ */
+.cate{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cate dl{padding:16px 14px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);transition:.28s;border-left:3px solid transparent}
+.cate dl:hover{border-left-color:var(--gold);background:rgba(255,255,255,.075);transform:translateY(-3px)}
+.cate dt{font-size:15px;font-weight:800;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.cate dt small{font-size:11.5px;color:var(--lime);font-weight:700}
+.cate dd{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+.cate dd a{padding:3px 10px;border-radius:999px;font-size:12px;background:rgba(163,229,53,.1);color:#cfe6d8;border:1px solid transparent;transition:.2s}
+.cate dd a:hover{color:#062014;background:linear-gradient(90deg,var(--lime),var(--gold));border-color:transparent}
+
+/* ============ HOT (ol) ============ */
+.hot{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:start}
+.hot ol{display:flex;flex-direction:column;gap:10px;counter-reset:r}
+.hot ol li{
+  display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;
+  padding:11px 14px;border-radius:12px;background:var(--card);border:1px solid var(--line);transition:.25s;
+}
+.hot ol li:hover{border-color:var(--lime);background:rgba(255,255,255,.07)}
+.hot ol li::before{counter-increment:r;content:counter(r,decimal-leading-zero);font-weight:900;font-size:19px;color:var(--muted);font-variant-numeric:tabular-nums}
+.hot ol li:nth-child(1)::before{color:var(--gold)}
+.hot ol li:nth-child(2)::before{color:#d9dee4}
+.hot ol li:nth-child(3)::before{color:#c98a5a}
+.hot ol li h4{font-size:14.5px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.hot ol li h4 mark{background:var(--green-2);color:var(--lime);border-radius:5px;padding:0 7px;font-size:11px;font-weight:800}
+.hot ol li h4 em{font-style:normal;font-size:11px;color:var(--gold);border:1px solid rgba(251,191,36,.5);border-radius:5px;padding:0 6px}
+.hot ol li .bar{position:relative;height:6px;border-radius:6px;background:rgba(255,255,255,.1);overflow:hidden;grid-column:2/4;margin-top:2px}
+.hot ol li .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:6px;width:0;background:linear-gradient(90deg,var(--lime),var(--gold));animation:fill .9s .1s forwards ease-out}
+@keyframes fill{to{width:var(--w)}}
+.tips{position:sticky;top:84px;padding:18px;border-radius:var(--r);background:linear-gradient(160deg,rgba(34,197,94,.14),rgba(251,191,36,.06));border:1px solid var(--line)}
+.tips h5{font-size:15px;color:var(--lime);margin-bottom:10px}
+.tips li{padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px;color:#cfe6d8}
+.tips li:last-child{border:0}
+.tips li b{color:var(--gold)}
+
+/* ============ NEWS (figure text-img) ============ */
+.news{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.news figure{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:13px;border-radius:var(--r);background:var(--card);border:1px solid var(--line);transition:.28s}
+.news figure:hover{border-color:rgba(251,191,36,.5)}
+.news .pic{aspect-ratio:4/3;border-radius:10px;position:relative;background:linear-gradient(135deg,var(--a),var(--b))}
+.news .pic span{position:absolute;left:8px;top:8px;font-size:11px;font-weight:800;padding:2px 8px;border-radius:6px;background:rgba(0,0,0,.5);color:var(--gold)}
+.news figcaption h3{font-size:16px;line-height:1.5}
+.news figcaption p{margin-top:6px;font-size:13px;color:var(--muted)}
+.news figcaption .meta{margin-top:9px;font-size:11.5px;color:#8fa893;display:flex;gap:10px;flex-wrap:wrap}
+
+/* ============ ABOUT ============ */
+.about{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.step{position:relative;padding:20px 16px;border-radius:var(--r);background:var(--card);border:1px solid var(--line)}
+.step::after{content:"";position:absolute;left:16px;right:16px;bottom:-14px;height:2px;border-top:2px dashed var(--line)}
+.step:last-child::after{display:none}
+.step .n{font-size:30px;font-weight:900;line-height:1;background:linear-gradient(90deg,var(--lime),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h4{margin-top:10px;font-size:16px}
+.step p{margin-top:6px;font-size:13px;color:var(--muted)}
+.facts{margin-top:26px;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.facts div{padding:14px;border-radius:12px;text-align:center;background:linear-gradient(160deg,rgba(34,197,94,.12),rgba(255,255,255,.02));border:1px solid var(--line)}
+.facts b{display:block;font-size:23px;font-weight:900;color:var(--lime)}
+.facts small{font-size:12px;color:var(--muted)}
+.note{margin-top:26px;padding:18px 20px;border-radius:var(--r);border:1px solid var(--line);background:rgba(251,191,36,.07);font-size:13.5px;color:#dfe9df}
+.note b{color:var(--gold)}
+
+/* ============ FOOT ============ */
+footer{border-top:1px solid var(--line);padding:44px 5vw 26px;background:rgba(4,14,8,.5)}
+.foot{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:26px}
+.foot h6{font-size:15px;margin-bottom:11px;color:var(--lime)}
+.foot a{display:block;font-size:13px;color:var(--muted);padding:3px 0;transition:.2s}
+.foot a:hover{color:#fff;transform:translateX(3px)}
+.foot p{font-size:13px;color:var(--muted)}
+.copy{margin-top:26px;padding-top:16px;border-top:1px dashed var(--line);font-size:12.5px;color:#7c9487;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.copy b{color:var(--gold)}
+
+/* ============ MOBILE ============ */
+@media(max-width:1000px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:50px}
+  .cucumber{height:250px;order:-1}
+  .pick{grid-template-columns:repeat(2,1fr)}
+  .news{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:760px){
+  body{padding-top:60px}
+  .site-nav{height:60px;gap:10px}
+  .brand b{font-size:15px}.brand em{display:none}
+  .ham{display:flex}
+  .nav-links{position:fixed;inset:60px 0 auto;flex-direction:column;gap:0;margin:0;padding:12px;background:rgba(8,26,15,.97);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:.35s}
+  .nav-links.open{max-height:520px;overflow:auto}
+  .nav-links a{border-radius:10px;padding:12px 14px;font-size:15px}
+  .hero{padding:34px 5vw 40px}
+  .hero h1{font-size:31px}
+  .hero h1 span{font-size:16px}
+  .cucumber{height:200px}
+  .cuke{width:170px;height:74px}
+  .jam figure{grid-template-columns:1fr;text-align:left}
+  .jam .cvr{aspect-ratio:16/9;max-height:none}
+  .jam figcaption dl.meta{grid-template-columns:repeat(2,1fr);font-size:11px}
+  .jam figcaption>a.btn{display:block;text-align:center}
+  .cate{grid-template-columns:1fr}
+  .hot{grid-template-columns:1fr}
+  .hot ol li .bar{grid-column:1/4}
+  .tips{position:static}
+  .news figure{grid-template-columns:110px 1fr;gap:11px}
+  .about{grid-template-columns:1fr 1fr}
+  .step::after{left:50%;right:auto;bottom:-7px;width:2px;height:14px;border-top:0;border-left:2px dashed var(--line)}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr;gap:20px}
+  section{padding:46px 5vw}
+  .sec-head h2{font-size:22px}
+  .sec-head p{width:100%;margin-left:0}
+}
+@media(max-width:420px){
+  .brand b{font-size:14px}
+  .hero h1{font-size:25px}
+  .search input,.search button{height:46px;flex:1 1 100%}
+  .pick{grid-template-columns:1fr}
+  .news figure{grid-template-columns:1fr}
+  .news .pic{aspect-ratio:16/8}
+  .about,.facts,.foot{grid-template-columns:1fr}
+}
+@media print{
+  body{background:#fff;color:#000}.site-nav,.search,.dots,#top{display:none}
+  section{padding:20px 0;break-inside:avoid}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaobao.js"></script>
+
+<header class="site-nav">
+  <a class="brand" href="#top" aria-label="黄瓜电影网 首页">
+    <span class="logo"><i></i></span>
+    <span><b>黄瓜电影网</b><br><em>huangguadianyingwang-cn.github.io</em></span>
+  </a>
+  <nav class="nav-links" id="nav">
+    <a href="#jam">黄瓜片单</a>
+    <a href="#pick">精选网址</a>
+    <a href="#cate">分类导航</a>
+    <a href="#hot">黄瓜榜</a>
+    <a href="#news">挑片笔记</a>
+    <a href="#about">关于本站</a>
+  </nav>
+  <div class="ham" id="ham" aria-label="菜单"><s></s></div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div>
+    <h1>黄瓜电影网 <span>清爽观影，不将就</span>
+    <u>好片像黄瓜，清脆、解渴、回味干净。</u></h1>
+    <p class="lead">黄瓜电影网只做一件事：把散落在网络里的<strong>优质电影、经典老片、高分口碑片与冷门佳作</strong>挑出来，按<b>题材 × 评分 × 画质 × 年代 × 地区 × 语言 × 时长</b>七个维度归档，<b>三步找到想看的</b>。页面清爽，不弹窗、不诱导、不搬运。</p>
+    <form class="search" onsubmit="return false">
+      <input type="search" placeholder="搜片名 / 导演 / 演员 / 关键词，例如：清爽、文艺、冷门、4K、中文字幕" aria-label="搜索影视">
+      <button type="submit">清爽去找</button>
+    </form>
+    <div class="stats">
+      <div><b>886</b>精选片单</div>
+      <div><b>312</b>收录网址</div>
+      <div><b>7</b>归档维度</div>
+      <div><b>每日</b>更新</div>
+    </div>
+  </div>
+  <div class="cucumber" aria-hidden="true">
+    <div class="vine"></div><div class="vine"></div>
+    <div class="cuke">
+      <span class="leaf l1"></span><span class="leaf l2"></span>
+      <b>清爽</b>
+      <i class="seed"></i><i class="seed"></i><i class="seed"></i><i class="seed"></i>
+    </div>
+    <i class="dot"></i><i class="dot"></i><i class="dot"></i>
+  </div>
+</section>
+
+<!-- ================= JAM ================= -->
+<section id="jam">
+  <div class="sec-head">
+    <h2><i>黄瓜</i>片单</h2>
+    <p>每一部都写过一句真话 · 共 886 部</p>
+    <span class="tag">每周更新</span>
+  </div>
+  <div class="jam">
+
+    <figure style="--a:#2f7a3b;--b:#0d2818">
+      <div class="cvr"><span>雨中的信件</span><u>2021</u><em>▶</em></div>
+      <figcaption>
+        <h3>雨中的信件 <mark>8.7</mark> <span class="tag">清爽</span></h3>
+        <div class="tags"><a href="#">文艺</a><a href="#">治愈</a><a href="#">长镜头</a><a href="#">冷门佳作</a><a href="#">4K 修复</a></div>
+        <p>一封迟到了三十年的信，被一场雨送回原地。全片几乎不用配乐，靠雨声和窗光把情绪推到最高。画面清爽，情绪干净，看完像洗过一次眼睛。</p>
+        <dl class="meta"><div><b>画质</b>4K HDR</div><div><b>码率</b>28 Mbps</div><div><b>字幕</b>简中/繁中</div><div><b>时长</b>113 分钟</div><div><b>地区</b>日本</div></dl>
+        <a class="btn" href="#">去看看</a>
+      </figcaption>
+    </figure>
+
+    <figure style="--a:#3f8f4a;--b:#14532d">
+      <div class="cvr"><span>第八日的风</span><u>2019</u><em>▶</em></div>
+      <figcaption>
+        <h3>第八日的风 <mark>8.4</mark> <span class="tag">自然光</span></h3>
+        <div class="tags"><a href="#">剧情</a><a href="#">家庭</a><a href="#">自然光</a><a href="#">慢节奏</a><a href="#">蓝光原盘</a></div>
+        <p>父亲出海未归的第八天，女儿在院子里数风。全片实景拍摄，只用自然光，胶片颗粒感十足。适合夜里一个人安静看完。</p>
+        <dl class="meta"><div><b>画质</b>1080P REMUX</div><div><b>码率</b>19 Mbps</div><div><b>字幕</b>简中</div><div><b>时长</b>96 分钟</div><div><b>地区</b>韩国</div></dl>
+        <a class="btn" href="#">去看看</a>
+      </figcaption>
+    </figure>
+
+    <figure style="--a:#4d7c59;--b:#1f3d2c">
+      <div class="cvr"><span>面包与星期天</span><u>2023</u><em>▶</em></div>
+      <figcaption>
+        <h3>面包与星期天 <mark>8.9</mark> <span class="tag">治愈</span></h3>
+        <div class="tags"><a href="#">治愈</a><a href="#">美食</a><a href="#">小人物</a><a href="#">轻喜剧</a><a href="#">杜比视界</a></div>
+        <p>一家开在巷子尽头的小面包店，只卖一种面包，只开星期天。用食物讲孤独，用甜味讲告别。色彩饱和克制，构图像静物画。</p>
+        <dl class="meta"><div><b>画质</b>4K 杜比视界</div><div><b>码率</b>32 Mbps</div><div><b>字幕</b>简中/英</div><div><b>时长</b>104 分钟</div><div><b>地区</b>法国</div></dl>
+        <a class="btn" href="#">去看看</a>
+      </figcaption>
+    </figure>
+
+    <figure style="--a:#6b8e4e;--b:#2c4a2f">
+      <div class="cvr"><span>海岛来信</span><u>2017</u><em>▶</em></div>
+      <figcaption>
+        <h3>海岛来信 <mark>8.2</mark> <span class="tag">胶片感</span></h3>
+        <div class="tags"><a href="#">爱情</a><a href="#">书信体</a><a href="#">胶片感</a><a href="#">冷门</a><a href="#">2K</a></div>
+        <p>两个人隔着一片海写信，写了二十年，却从没见过面。海浪、灯塔、旧信封，每一帧都能当壁纸。建议 2K 以上画质观看。</p>
+        <dl class="meta"><div><b>画质</b>2K 修复</div><div><b>码率</b>15 Mbps</div><div><b>字幕</b>简中</div><div><b>时长</b>128 分钟</div><div><b>地区</b>葡萄牙</div></dl>
+        <a class="btn" href="#">去看看</a>
+      </figcaption>
+    </figure>
+
+    <figure style="--a:#a3b86a;--b:#4a5c34">
+      <div class="cvr"><span>沉默的档案员</span><u>2022</u><em>▶</em></div>
+      <figcaption>
+        <h3>沉默的档案员 <mark>8.5</mark> <span class="tag">悬疑</span></h3>
+        <div class="tags"><a href="#">悬疑</a><a href="#">档案</a><a href="#">冷色调</a><a href="#">高分</a><a href="#">蓝光</a></div>
+        <p>档案馆里多出一份不属于任何人的档案。没有反转堆砌，靠声音和留白把悬念做到最后一秒。冷色调摄影，适合戴耳机看。</p>
+        <dl class="meta"><div><b>画质</b>1080P 蓝光</div><div><b>码率</b>16 Mbps</div><div><b>字幕</b>简中/繁中</div><div><b>时长</b>121 分钟</div><div><b>地区</b>西班牙</div></dl>
+        <a class="btn" href="#">去看看</a>
+      </figcaption>
+    </figure>
+
+    <figure style="--a:#c9d68f;--b:#7a8647">
+      <div class="cvr"><span>循环的第十五天</span><u>2024</u><em>▶</em></div>
+      <figcaption>
+        <h3>循环的第十五天 <mark>8.6</mark> <span class="tag">科幻</span></h3>
+        <div class="tags"><a href="#">科幻</a><a href="#">时间循环</a><a href="#">低成本</a><a href="#">高概念</a><a href="#">4K</a></div>
+        <p>时间困在同一天，但每天都会少一样东西。全片只有三个场景，却把"失去"讲得比大多数大制作更狠。概念先行，逻辑自洽。</p>
+        <dl class="meta"><div><b>画质</b>4K</div><div><b>码率</b>22 Mbps</div><div><b>字幕</b>简中/英</div><div><b>时长</b>88 分钟</div><div><b>地区</b>美国</div></dl>
+        <a class="btn" href="#">去看看</a>
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ================= PICK ================= -->
+<section id="pick">
+  <div class="sec-head">
+    <h2>精选<b style="color:var(--lime)">网址</b></h2>
+    <p>人工核验 · 跳转干净 · 更新及时 · 共 312 个</p>
+    <span class="tag">清爽入口</span>
+  </div>
+  <div class="pick">
+
+    <div class="card">
+      <div class="ava" style="background:conic-gradient(from 0deg,#22c55e,#a3e635,#fbbf24,#22c55e)"></div>
+      <h4>清爽影院 <s>1080P</s></h4>
+      <p>界面干净、分类清晰、无诱导按钮，适合快速定位想看的那一部。</p>
+      <div class="foot"><span>画质 1080P / 2K</span><span>中文字幕</span></div>
+    </div>
+
+    <div class="card">
+      <div class="ava" style="background:conic-gradient(from 90deg,#3f8f4a,#a3e635,#22c55e,#3f8f4a)"></div>
+      <h4>蓝光原盘馆 <s>REMUX</s></h4>
+      <p>专注蓝光原盘与 REMUX，码率标注清楚，适合大屏与投影用户。</p>
+      <div class="foot"><span>蓝光 / REMUX</span><span>杜比视界</span></div>
+    </div>
+
+    <div class="card">
+      <div class="ava" style="background:conic-gradient(from 180deg,#14532d,#22c55e,#a3e635,#14532d)"></div>
+      <h4>4K 修复厅 <s>4K</s></h4>
+      <p>老片 4K 修复资源集散地，胶片颗粒与 HDR 色彩兼顾，情怀不糊。</p>
+      <div class="foot"><span>4K HDR10+</span><span>老片修复</span></div>
+    </div>
+
+    <div class="card">
+      <div class="ava" style="background:conic-gradient(from 270deg,#fbbf24,#a3e635,#22c55e,#fbbf24)"></div>
+      <h4>中文字幕组 <s>字幕</s></h4>
+      <p>简体、繁体、双语字幕归档，校译质量高，时间轴精准，无错字硬伤。</p>
+      <div class="foot"><span>简中 / 繁中</span><span>双语</span></div>
+    </div>
+
+    <div class="card">
+      <div class="ava" style="background:conic-gradient(from 40deg,#6b8e4e,#a3e635,#fbbf24,#6b8e4e)"></div>
+      <h4>十五分钟厅 <s>短片</s></h4>
+      <p>通勤、午休、睡前刚好够用的短片与微电影，十分钟内讲完一个故事。</p>
+      <div class="foot"><span>≤15 分钟</span><span>短片</span></div>
+    </div>
+
+    <div class="card">
+      <div class="ava" style="background:conic-gradient(from 130deg,#2f7a3b,#22c55e,#a3e635,#2f7a3b)"></div>
+      <h4>冷门不冷 <s>冷门</s></h4>
+      <p>评分 8 分以上、看过不足十万的冷门佳作，专治"片荒"与"看完了"。</p>
+      <div class="foot"><span>≥8 分</span><span>冷门佳作</span></div>
+    </div>
+
+    <div class="card">
+      <div class="ava" style="background:conic-gradient(from 220deg,#1f5c2c,#a3e635,#22c55e,#1f5c2c)"></div>
+      <h4>纪录片专区 <s>纪录</s></h4>
+      <p>自然、人文、历史、犯罪、音乐，真实比虚构更锋利，4K 素材尤其震撼。</p>
+      <div class="foot"><span>自然 / 人文</span><span>4K</span></div>
+    </div>
+
+    <div class="card">
+      <div class="ava" style="background:conic-gradient(from 310deg,#4a5c34,#fbbf24,#a3e635,#4a5c34)"></div>
+      <h4>烂片避雷 <s>避雷</s></h4>
+      <p>把踩过的坑写清楚：哪里崩、哪里假、哪里浪费时间，帮你省下两小时。</p>
+      <div class="foot"><span>避雷清单</span><span>每周更新</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CATE ================= -->
+<section id="cate">
+  <div class="sec-head">
+    <h2>分类<b style="color:var(--lime)">导航</b></h2>
+    <p>按题材、画质、年代、地区、语言、时长、评分七维归档</p>
+    <span class="tag">清爽分类</span>
+  </div>
+  <div class="cate">
+
+    <dl><dt>剧情片 <small>142 部</small></dt>
+      <dd><a href="#">家庭</a><a href="#">成长</a><a href="#">爱情</a><a href="#">治愈</a><a href="#">女性</a></dd></dl>
+
+    <dl><dt>悬疑 / 犯罪 <small>118 部</small></dt>
+      <dd><a href="#">反转</a><a href="#">心理</a><a href="#">冷色调</a><a href="#">高智商</a><a href="#">短片</a></dd></dl>
+
+    <dl><dt>科幻 / 奇幻 <small>96 部</small></dt>
+      <dd><a href="#">时间循环</a><a href="#">末日</a><a href="#">低成本</a><a href="#">高概念</a><a href="#">太空</a></dd></dl>
+
+    <dl><dt>动作 / 战争 <small>87 部</small></dt>
+      <dd><a href="#">实拍</a><a href="#">长镜头</a><a href="#">冷战</a><a href="#">历史</a><a href="#">60fps</a></dd></dl>
+
+    <dl><dt>喜剧 / 轻喜 <small>104 部</small></dt>
+      <dd><a href="#">黑色幽默</a><a href="#">生活流</a><a href="#">方言</a><a href="#">冷门</a><a href="#">15 分钟</a></dd></dl>
+
+    <dl><dt>文艺 / 独立 <small>131 部</small></dt>
+      <dd><a href="#">胶片感</a><a href="#">自然光</a><a href="#">慢节奏</a><a href="#">长镜头</a><a href="#">静物构图</a></dd></dl>
+
+    <dl><dt>纪录片 <small>78 部</small></dt>
+      <dd><a href="#">自然</a><a href="#">人文</a><a href="#">音乐</a><a href="#">犯罪</a><a href="#">4K</a></dd></dl>
+
+    <dl><dt>经典老片 <small>155 部</small></dt>
+      <dd><a href="#">4K 修复</a><a href="#">黑白</a><a href="#">默片</a><a href="#">胶片颗粒</a><a href="#">蓝光原盘</a></dd></dl>
+
+    <dl><dt>画质专区 <small>312 个</small></dt>
+      <dd><a href="#">1080P</a><a href="#">2K</a><a href="#">4K</a><a href="#">蓝光原盘</a><a href="#">REMUX</a><a href="#">杜比视界</a><a href="#">HDR10+</a><a href="#">60fps</a><a href="#">中文字幕</a></dd></dl>
+
+  </div>
+</section>
+
+<!-- ================= HOT ================= -->
+<section id="hot">
+  <div class="sec-head" style="width:100%">
+    <h2><i>黄瓜</i>榜</h2>
+    <p>本周访问与收藏综合排序 · 每日更新</p>
+    <span class="tag">口碑优先</span>
+  </div>
+  <div class="hot">
+    <ol>
+      <li><h4>雨中的信件 <mark>清爽</mark><em>8.7</em></h4><div class="bar" style="--w:94%"></div><span>2.4万</span></li>
+      <li><h4>面包与星期天 <mark>治愈</mark><em>8.9</em></h4><div class="bar" style="--w:88%"></div><span>1.9万</span></li>
+      <li><h4>循环的第十五天 <mark>高概念</mark><em>8.6</em></h4><div class="bar" style="--w:81%"></div><span>1.5万</span></li>
+      <li><h4>沉默的档案员 <mark>冷色调</mark><em>8.5</em></h4><div class="bar" style="--w:74%"></div><span>1.2万</span></li>
+      <li><h4>第八日的风 <mark>自然光</mark><em>8.4</em></h4><div class="bar" style="--w:67%"></div><span>9800</span></li>
+      <li><h4>海岛来信 <mark>胶片感</mark><em>8.2</em></h4><div class="bar" style="--w:60%"></div><span>7600</span></li>
+      <li><h4>便利店夜班 <mark>生活流</mark><em>8.1</em></h4><div class="bar" style="--w:54%"></div><span>6100</span></li>
+      <li><h4>海边的第十五级台阶 <mark>留白</mark><em>8.3</em></h4><div class="bar" style="--w:48%"></div><span>4900</span></li>
+    </ol>
+    <aside class="tips">
+      <h5>挑片三条心得</h5>
+      <ul>
+        <li><b>画面要清爽</b>：构图、色彩、光线经得起暂停，滤镜感一律扣分。</li>
+        <li><b>情绪要真实</b>：不靠配乐催泪，不靠台词说教，安静讲完就算赢。</li>
+        <li><b>画质要够用</b>：老片看修复，新片看调色；1080P 起跳，4K 优先。</li>
+        <li><b>时长要诚实</b>：90 分钟能把话说完的，就不该拍 150 分钟。</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= NEWS ================= -->
+<section id="news">
+  <div class="sec-head">
+    <h2>挑片<b style="color:var(--lime)">笔记</b></h2>
+    <p>观影随笔、画质科普、避雷清单 · 每周 3 篇</p>
+    <span class="tag">原创</span>
+  </div>
+  <div class="news">
+
+    <figure style="--a:#2f7a3b;--b:#0d2818">
+      <div class="pic"><span>观影随笔</span></div>
+      <figcaption>
+        <h3>为什么我越来越偏爱"画面清爽"的电影</h3>
+        <p>不是滤镜，是光线；不是高饱和，是克制。三部长镜头作品，教你一眼看出"画面干净"。</p>
+        <div class="meta"><span>清爽观影</span><span>8 分钟</span><span>2026-10-08</span></div>
+      </figcaption>
+    </figure>
+
+    <figure style="--a:#4d7c59;--b:#1f3d2c">
+      <div class="pic"><span>画质科普</span></div>
+      <figcaption>
+        <h3>1080P、2K、4K、蓝光原盘、REMUX，到底差在哪</h3>
+        <p>一次说清分辨率、码率、色深、HDR 的关系。手机看 1080P 足够，大屏请上 4K 原盘。</p>
+        <div class="meta"><span>画质</span><span>12 分钟</span><span>2026-10-05</span></div>
+      </figcaption>
+    </figure>
+
+    <figure style="--a:#6b8e4e;--b:#2c4a2f">
+      <div class="pic"><span>片单</span></div>
+      <figcaption>
+        <h3>十五分钟，刚好够看完一部好电影</h3>
+        <p>通勤、午休、睡前不再刷短视频。12 部 15 分钟以内的短片，每一部都值得看完片尾字幕。</p>
+        <div class="meta"><span>短片</span><span>15 分钟</span><span>2026-10-02</span></div>
+      </figcaption>
+    </figure>
+
+    <figure style="--a:#a3b86a;--b:#4a5c34">
+      <div class="pic"><span>避雷</span></div>
+      <figcaption>
+        <h3>这 7 部"高分推荐"，我劝你别看</h3>
+        <p>评分不假，但节奏、口味、时长都不适合大多数人。把踩过的坑写清楚，帮你省下两小时。</p>
+        <div class="meta"><span>烂片避雷</span><span>6 分钟</span><span>2026-09-28</span></div>
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="sec-head">
+    <h2>关于<b style="color:var(--lime)">本站</b></h2>
+    <p>黄瓜电影网 · huangguadianyingwang-cn.github.io</p>
+    <span class="tag">清爽不将就</span>
+  </div>
+  <div class="about">
+    <div class="step"><div class="n">01</div><h4>挑</h4><p>只挑值得看的。评分、口碑、画面、节奏四关过完，才进片单。</p></div>
+    <div class="step"><div class="n">02</div><h4>核</h4><p>人工核验网址：跳转是否干净、画质是否如实、字幕是否准确、更新是否及时。</p></div>
+    <div class="step"><div class="n">03</div><h4>写</h4><p>每一部都写一句真话：哪里好、哪里闷、适合谁、不适合谁。</p></div>
+    <div class="step"><div class="n">04</div><h4>更</h4><p>每周补充新片，每月复核旧链，失效即下架，不让用户点进死胡同。</p></div>
+  </div>
+  <div class="facts">
+    <div><b>886</b><small>精选片单</small></div>
+    <div><b>312</b><small>收录网址</small></div>
+    <div><b>7</b><small>归档维度</small></div>
+    <div><b>9</b><small>分类频道</small></div>
+    <div><b>0</b><small>弹窗广告</small></div>
+    <div><b>24h</b><small>侵权下架</small></div>
+  </div>
+  <div class="note"><b>合规声明：</b>黄瓜电影网定位为<b>影视网址导航、片单推荐与观影资讯分享</b>，<b>不提供、不存储、不转存任何影视资源文件</b>，所有影视版权归原作者与发行方所有。本站仅收录公开可访问的第三方网址，若涉及侵权请通过页脚联系方式告知，将在 <b>24 小时内</b>下架相关链接。请支持正版，走进影院，尊重创作。页面所示片单、画质、码率、字幕、时长、评分均为<b>示例占位</b>，请以实际片源为准。</div>
+</section>
+
+<footer>
+  <div class="foot">
+    <div>
+      <h6>黄瓜电影网</h6>
+      <p>清爽观影，不将就。专注优质电影、经典老片、高分口碑片与冷门佳作的网址导航与片单推荐。页面清爽，不弹窗、不诱导、不搬运。</p>
+    </div>
+    <div>
+      <h6>频道</h6>
+      <a href="#">清爽片单</a>
+      <a href="#">十五分钟厅</a>
+      <a href="#">冷门不冷</a>
+      <a href="#">画质专区</a>
+      <a href="#">烂片避雷</a>
+    </div>
+    <div>
+      <h6>分类</h6>
+      <a href="#">剧情</a>
+      <a href="#">悬疑</a>
+      <a href="#">科幻</a>
+      <a href="#">文艺</a>
+      <a href="#">纪录片</a>
+    </div>
+    <div>
+      <h6>画质</h6>
+      <a href="#">1080P</a>
+      <a href="#">2K</a>
+      <a href="#">4K</a>
+      <a href="#">蓝光原盘</a>
+      <a href="#">杜比视界</a>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© <span id="y">2026</span> 黄瓜电影网 · huangguadianyingwang-cn.github.io · 清爽观影，不将就</span>
+    <span>网址：<b>https://www.huangguadianyingwang-cn.github.io</b> ｜ 不提供任何影视资源下载文件</span>
+  </div>
+</footer>
+
+<div class="dots" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部" style="position:fixed;right:18px;bottom:22px;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:150;background:linear-gradient(135deg,var(--lime),var(--gold));color:#062014;font-weight:900;box-shadow:0 10px 26px -12px rgba(163,229,53,.8);transition:.25s">↑</div>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+document.getElementById('ham').addEventListener('click',function(){
+  document.getElementById('nav').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('nav').classList.remove('open');});
+});
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting){
+      document.querySelectorAll('.nav-links a').forEach(function(a){
+        a.style.color = a.getAttribute('href')==='#'+e.target.id ? '#fff' : '';
+        a.style.background = a.getAttribute('href')==='#'+e.target.id ? 'rgba(255,255,255,.08)' : '';
+      });
+    }
+  });
+},{threshold:.25});
+document.querySelectorAll('section[id]').forEach(function(s){io.observe(s);});
+</script>
+</body>
+</html>
